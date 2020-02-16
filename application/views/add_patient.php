@@ -1,0 +1,499 @@
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clinic Management System - Responsive Web Application Kit by Fusion Technologies</title>
+
+  <!-- Global stylesheets -->
+   <?php $this->load->view('font')?>
+  <link href="<?php echo base_url()?>assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+  <link href="<?php echo base_url()?>assets/css/minified/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="<?php echo base_url()?>assets/css/minified/core.min.css" rel="stylesheet" type="text/css">
+  <link href="<?php echo base_url()?>assets/css/minified/components.min.css" rel="stylesheet" type="text/css">
+  <link href="<?php echo base_url()?>assets/css/minified/colors.min.css" rel="stylesheet" type="text/css">
+  <!-- /global stylesheets -->
+
+  <!-- Core JS files -->
+  <script type="text/javascript" src="<?php echo base_url()?>assets/js/core/libraries/jquery.min.js"></script>
+  <script type="text/javascript" src="<?php echo base_url()?>assets/js/core/libraries/bootstrap.min.js"></script>
+  <script type="text/javascript" src="<?php echo base_url()?>assets/js/plugins/loaders/blockui.min.js"></script>
+  <script type="text/javascript" src="<?php echo base_url()?>assets/js/plugins/pickers/pickadate/picker.js"></script>
+  <script type="text/javascript" src="<?php echo base_url()?>assets/js/plugins/pickers/pickadate/picker.date.js"></script>
+  <!-- /core JS files -->
+  <script type="text/javascript">
+    $(document).ready(function($) {
+     
+    $('.daterange-basic').pickadate({
+        format: 'yyyy-mm-dd'
+      });
+      $('.daterange-basic2').pickadate({
+        format: 'yyyy-mm-dd'
+      });
+    });
+  </script>
+  
+
+
+  <!-- Theme JS files -->
+  <script type="text/javascript" src="<?php echo base_url()?>assets/dropzone.js"></script>
+
+  <script type="text/javascript" src="<?php echo base_url()?>assets/js/core/libraries/jquery_ui/effects.min.js"></script>
+  <script type="text/javascript" src="<?php echo base_url()?>assets/js/plugins/notifications/jgrowl.min.js"></script>
+  <script type="text/javascript" src="<?php echo base_url()?>assets/js/plugins/ui/moment/moment.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url()?>assets/js/pages/components_notifications_pnotify.js"></script>
+  <script type="text/javascript" src="<?php echo base_url()?>assets/js/plugins/notifications/pnotify.min.js"></script>
+  <script type="text/javascript" src="<?php echo base_url()?>assets/js/core/app.js"></script>
+  <script type="text/javascript" src="<?php echo base_url()?>assets/js/core/libraries/jquery_ui/interactions.min.js"></script>
+  <script type="text/javascript" src="<?php echo base_url()?>assets/js/plugins/forms/selects/select2.min.js"></script>
+
+  
+  <script type="text/javascript" src="<?php echo base_url()?>assets/js/pages/form_select2.js"></script>
+  <script type="text/javascript" src="<?php echo base_url()?>assets/js/plugins/forms/styling/uniform.min.js"></script>
+  <script type="text/javascript" src="<?php echo base_url()?>assets/js/plugins/forms/styling/switchery.min.js"></script>
+  <script type="text/javascript" src="<?php echo base_url()?>assets/js/plugins/forms/styling/switch.min.js"></script>
+
+  
+  <script type="text/javascript" src="<?php echo base_url()?>assets/js/pages/form_checkboxes_radios.js"></script>
+
+
+</head>
+<body>
+
+	
+<?php $this->load->view('nav'); ?>
+
+	<!-- Page container -->
+	<div class="page-container">
+
+		<!-- Page content -->
+		<div class="page-content">
+
+<?php $this->load->view('main_nav'); ?>
+					
+			<!-- Advanced legend -->
+							
+								<div class="panel panel-flat">
+									<div class="panel-heading">
+										<h5 class="panel-title">Add Patient Form</h5>
+										<div class="heading-elements">
+											<ul class="icons-list">
+						                		<li><a data-action="collapse"></a></li>
+						                		<li><a data-action="reload"></a></li>
+						                		<li><a data-action="close"></a></li>
+						                	</ul>
+					                	</div>
+									</div>
+
+																		<div class="panel-body">
+																		<div class='alertdiv'>   </div>
+										<fieldset>
+											<legend class="text-semibold">
+												<i class="icon-file-text2 position-left"></i>
+												Enter your information
+												<a class="control-arrow" data-toggle="collapse" data-target="#demo1">
+													<i class="icon-circle-down2"></i>
+												</a>
+											</legend>
+
+											<div class="collapse in" id="demo1">
+											<div class="row">
+												<div class = "form-group">
+												<div class="col-md-4">
+													<label style="font-weight:bold;">Name:</label>
+													<input type="text" id="name" class="form-control" placeholder="e.g. Akbar">
+												</div>
+
+
+												
+
+												 <div class="col-md-4">
+                  								 <label style="font-weight:bold;">Age:</label>
+                  								 <input type="number"  id="age" placeholder="Enter Your Age" class="form-control">
+                 								 </div> 
+
+												<div class="col-md-4">
+													<label style="font-weight:bold;">Address:</label>
+													<input type="text" id="address" class="form-control" placeholder="e.g. 2/2 abc street">
+												</div>
+											</div>
+										</div>
+                                                <br>
+                                                <div class="row">
+                                                	<div class="form-gruop">
+											
+                                                        											
+                                                <div class="col-md-4">
+                  
+                  <label style="font-weight:bold;">Entry Date:</label>
+                    <div class="input-group" style="width:0px auto;">
+                      <span class="input-group-addon"><i class="icon-calendar3"></i></span>
+                      <input type="date" class="form-control daterange-basic" id="entry_date" readonly="">
+                    </div>
+                  </div>    
+                        
+          
+
+												
+
+
+												<div class="col-md-4">
+													<label style="font-weight:bold;">Phone No:</label>
+													<input type="number" class="form-control" id="phone_no" placeholder="e.g. +9233333...">
+												</div>
+
+												<div class="col-md-4">
+                    <label  class="control-label" style="font-weight:bold;">Blood Group</label>
+                    <select  data-placeholder="Select a Blood Gruop" id="blood_group" class="select-clear">
+
+                      <option></option>
+                      <optgroup label="Select a Blood Group">
+                       
+                        <option>A+</option>
+                         <option>A-</option>
+                          <option>B+</option>
+                           <option>B-</option>
+                            <option>O+</option>
+                             <option>O-</option>
+                     
+                      </optgroup>
+                      
+                    </select>
+                  </div>
+</div>
+          </div>
+          <br>
+											<div class="row">
+												<div class="form-group">
+													<div class="col-md-4">
+													<label style="font-weight:bold;">CNIC NO:</label>
+													<input type="number" class="form-control" id="cnic" placeholder="e.g. 42101-1234567-8">
+												</div>
+
+												
+												<div class="col-md-4">
+                    <label  class="control-label" style="font-weight:bold;">Department</label>
+                    <select  data-placeholder="Select a Department" id="dept_id" class="select-clear">
+                    <option></option>
+                      <optgroup label="Select a Department">
+                       
+                        <?php foreach($dep as $c): ?>
+                                                <option value="<?php echo $c->id ?>"><?php echo $c->name ?></option>
+                                               <?php endforeach ?>
+                     
+                      </optgroup>
+                      
+                    </select>
+                  </div>
+
+												
+											
+									
+
+					                			
+
+
+
+					                			<div class="col-md-4">
+                    <label  class="control-label" style="font-weight:bold;">Gender</label>
+                    <select  data-placeholder="Select a Gender" id="gender" class="select-clear">
+
+                      <option></option>
+                      <optgroup label="Select a Blood Gruop">
+                       
+                        <?php foreach($gen as $c): ?>
+                                                <option value="<?php echo $c->id ?>"><?php echo $c->gender?></option>
+                                               <?php endforeach ?>
+                     
+                      </optgroup>
+                      
+                    </select>
+                  </div>
+					                			</div>
+					                			</div>
+					                			<br>
+                                <div class="row">
+
+												<div class="col-md-4    imageUploadGrp" >
+                          <label style="font-weight:bold;">Image:</label>
+                          <br>
+                           <button type="button" class="btn btn-default btn-lg selectImage">Upload</button>
+                        </div>
+                        </div>
+                        <br>
+
+					                			<div class="form-group">
+													<label style="font-weight:bold;">About Disease:</label>
+				                                    <textarea rows="5" cols="5" id="about_disease" placeholder="Few words about yourself..." class="form-control"></textarea>
+					                			</div>
+				                			</div>
+										</fieldset>
+
+										<div class="text-right">
+											<button type="submit" class="btn btn-primary     submit">Submit form <i class="icon-arrow-right14 position-right"></i></button>
+										</div>
+										</div>
+								</div>
+							</form>
+							<!-- /a legend -->
+
+					
+						</div>
+		<!-- /page content -->
+
+	</div>
+	<!-- /page container -->
+ <script type="text/javascript">
+var imgUpdate;
+var fileCount;
+
+
+  $('.selectImage').on('click',function(e){
+      e.preventDefault();
+    });
+    var url = '<?php echo site_url("patient/add_patient")?>';
+
+    imgUpdate = new Dropzone(".selectImage",
+    {
+
+      url: url,
+      autoProcessQueue: false,
+      autoDiscover: false,
+      paramName: "image",
+      addedfile: function(file){
+
+        $('.data-dz-name').text(file.name);
+        fileCount = imgUpdate.files.length;
+        
+      },
+      thumbnail: function(file, dataUrl){
+        $('#offerImage').attr('src', dataUrl);
+      },
+      sending: function(file, xhr, formData){
+          formData.append("name", $('#name').val());
+          formData.append("cnic", $('#cnic').val());
+          formData.append("dept_id", $('#dept_id').val());
+          formData.append("age", $('#age').val());
+          formData.append("gender", $('#gender').val());
+          formData.append("phone_no", $('#phone_no').val());
+          formData.append("address", $('#address').val());
+          formData.append("blood_group", $('#blood_group').val());
+          formData.append("about_disease", $('#about_disease').val());
+          formData.append("entry_date", $('#entry_date').val());
+      },
+      success: function(file, response){
+          var data = $.parseJSON(response);
+                          if (data['success']) {
+                          $('.alertdiv').html('<div class="alert alert-success alert-styled-left alert-arrow-left alert-bordered"><button type="button" class="close" data-dismiss="alert"><span>&times;</span><span class="sr-only">Close</span></button><span class="text-semibold">Successfull!</span> patient Entered.</div>');
+                           window.setTimeout(function(){window.location.replace("<?php echo site_url('patient') ?>");},1000) 
+              
+                       }
+
+}
+    });
+
+
+$('.submit').on('click',function(){
+  if(!$('#name').val()){
+      new PNotify({
+        title:'Error',
+        text:'Fill the Name fields',
+        addclass:'bg-danger'
+      });
+     }
+     else if(!$('#age' ).val()){
+      new PNotify({
+        title:'Error',
+        text:'Enter the Age',
+        addclass:'bg-danger'
+      });
+    }
+     else if(!$('#dept_id' ).val()){
+      new PNotify({
+        title:'Error',
+        text:'Choose The Department',
+        addclass:'bg-danger'
+      });
+     }
+     else if(!$('#phone_no' ).val()){
+      new PNotify({
+        title:'Error',
+        text:'Enter the Phone Number fields',
+        addclass:'bg-danger'
+      });
+     }
+     else if(!$('#gender' ).val()){
+      new PNotify({
+        title:'Error',
+        text:'Select The Gender',
+        addclass:'bg-danger'
+      });
+     }
+     else if(!$('#address' ).val()){
+      new PNotify({
+        title:'Error',
+        text:'Fill the Address field',
+        addclass:'bg-danger'
+      });
+     }
+     else if(!$('#entry_date' ).val()){
+      new PNotify({
+        title:'Error',
+        text:'Fill the Entry Date fields',
+        addclass:'bg-danger'
+      });
+    }
+    else if(!$('#blood_group' ).val()){
+      new PNotify({
+        title:'Error',
+        text:'Select The Blood Gruop',
+        addclass:'bg-danger'
+      });
+    }
+    else if(!$('#cnic' ).val()){
+      new PNotify({
+        title:'Error',
+        text:'Fill the CNIC fields',
+        addclass:'bg-danger'
+      });
+    }
+    else if(!$('#about_disease' ).val()){
+      new PNotify({
+        title:'Error',
+        text:'Fill the About Disease fields',
+        addclass:'bg-danger'
+      });
+    }
+     else{ 
+       if (fileCount > 0) {
+      
+    imgUpdate.processQueue();
+  }
+  else{
+    new PNotify({
+        title:'Error',
+        text:'Upload An Image',
+        addclass:'bg-danger'
+      });
+  }
+  }
+
+
+  
+});
+</script>
+<!-- <script type="text/javascript">
+
+
+$('.submit').on('click',function(){
+    var patientData = new Object();
+    patientData.name = $('#name').val();
+    patientData.age = $('#age').val();
+    patientData.address = $('#address').val();
+    patientData.entry_date = $('#entry_date').val();
+    patientData.dept_id = $('#dept_id').val();
+    patientData.phone_no = $('#phone_no').val();
+    patientData.gender = $('#gender').val();
+    patientData.blood_group = $('#blood_group').val();
+    patientData.cnic = $('#cnic').val();
+    patientData.about_disease = $('#about_disease').val();
+    if(!$('#name').val()){
+    	new PNotify({
+    		title:'Error',
+    		text:'Fill the Name fields',
+    		addclass:'bg-danger'
+    	});
+    }
+    else if(!$('#age' ).val()){
+    	new PNotify({
+    		title:'Error',
+    		text:'Enter the Age',
+    		addclass:'bg-danger'
+    	});
+    }
+    else if(!$('#address' ).val()){
+    	new PNotify({
+    		title:'Error',
+    		text:'Fill the Address fields',
+    		addclass:'bg-danger'
+    	});
+    }
+    else if(!$('#entry_date' ).val()){
+    	new PNotify({
+    		title:'Error',
+    		text:'Fill the Entry Date fields',
+    		addclass:'bg-danger'
+    	});
+    }
+    else if(!$('#dept_id' ).val()){
+    	new PNotify({
+    		title:'Error',
+    		text:'Choose The Department',
+    		addclass:'bg-danger'
+    	});
+    }
+    else if(!$('#phone_no' ).val()){
+    	new PNotify({
+    		title:'Error',
+    		text:'Enter the Phone On fields',
+    		addclass:'bg-danger'
+    	});
+    }
+    else if(!$('#gender' ).val()){
+    	new PNotify({
+    		title:'Error',
+    		text:'Select The Gender',
+    		addclass:'bg-danger'
+    	});
+    }
+    else if(!$('#blood_group' ).val()){
+    	new PNotify({
+    		title:'Error',
+    		text:'Select The Blood Gruop',
+    		addclass:'bg-danger'
+    	});
+    }
+    else if(!$('#cnic' ).val()){
+    	new PNotify({
+    		title:'Error',
+    		text:'Fill the CNIC fields',
+    		addclass:'bg-danger'
+    	});
+    }
+    else if(!$('#about_disease' ).val()){
+    	new PNotify({
+    		title:'Error',
+    		text:'Fill the About Disease fields',
+    		addclass:'bg-danger'
+    	});
+    }
+    else{
+    var url = '<?php echo site_url("patient/add_patient")?>';
+
+    $.ajax({
+        url: url,
+        data: patientData,
+        type: 'post',
+         success: function(response){
+             var data = $.parseJSON(response);
+                         if (data['success']) {
+                         $('.alertdiv').html('<div class="alert alert-success alert-styled-left alert-arrow-left alert-bordered"><button type="button" class="close" data-dismiss="alert"><span>&times;</span><span class="sr-only">Close</span></button><span class="text-semibold">Successfull!</span> Patient Entered.</div>');
+                          window.setTimeout(function(){window.location.replace("<?php echo site_url('patient') ?>");},1000) 
+              
+                      }
+                      
+            
+        }
+        
+           
+});}
+});
+
+</script> -->
+
+
+
+</body>
+</html>
